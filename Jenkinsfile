@@ -11,7 +11,7 @@ pipeline {
             steps 
             {
                 sh '''curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-                sudo groupadd docker
+                newgrp docker
                 sudo usermod -aG docker $USER && newgrp docker'
                 '''
                 script
