@@ -12,7 +12,12 @@ pipeline {
             {
                 sh'''
                     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-                    sudo usermod -aG docker $USER && newgrp docker
+                    sudo apt install cpu-checker && sudo kvm-ok
+                    sudo kvm-ok
+                    sudo apt install libvirt-clients libvirt-daemon-system qemu-kvm \
+                    && sudo usermod -a -G libvirt $(whoami) \
+                    && newgrp libvirt
+                    #sudo usermod -aG docker $USER && newgrp docker
                     sudo install minikube-linux-amd64 /usr/local/bin/minikube
                     minikube start
                 '''
