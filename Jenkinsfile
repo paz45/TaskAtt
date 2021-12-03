@@ -12,7 +12,7 @@ pipeline {
             {
                 sh '''curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
                 newgrp docker
-                sudo usermod -aG docker $USER && newgrp docker
+                sudo usermod -aG docker $USER
                 '''
                 script
                 {
