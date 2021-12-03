@@ -23,7 +23,7 @@ pipeline {
                         '''
                     }
                 }
-                sh 'minikube start --driver=docker'
+                sh 'sudo minikube start --driver=docker'
             }
         }
     }
