@@ -15,7 +15,7 @@ pipeline {
                 script
                 {
                     def installation = sh(script: "sudo install minikube-linux-amd64 /usr/local/bin/minikube", returnStatus:true)
-                    if ($installation != '0')
+                    if (${installation} != '0')
                     {
                         sh'''
                         docker system prune
