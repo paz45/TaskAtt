@@ -7,7 +7,7 @@ pipeline {
         // gitLabConnection('SQream_gitlab')
     }
     stages{
-        stage('install minikube') {
+        stage('install_minikube') {
             steps 
             {
                 sh'''
