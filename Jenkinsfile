@@ -10,8 +10,10 @@ pipeline {
         stage('install_minikube') {
             steps 
             {
-                sh 'curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64'
-                sh 'sudo usermod -aG docker $USER && newgrp docker'
+                sh '''curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+                sudo groupadd docker
+                sudo usermod -aG docker $USER && newgrp docker'
+                '''
                 script
                 {
                     def installation = sh(script: "sudo install minikube-linux-amd64 /usr/local/bin/minikube", returnStatus:true)
