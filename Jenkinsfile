@@ -14,7 +14,7 @@ pipeline {
                 sh 'sudo usermod -aG docker $USER && newgrp docker'
                 script
                 {
-                    def installation = sh(script: "sudo install minikube-linux-amd64 /usr/local/bin/minikube", returnStatus:true).trim() as Integer
+                    def installation = sh(script: "sudo install minikube-linux-amd64 /usr/local/bin/minikube", returnStatus:true)
                     if ($installation != '0')
                     {
                         sh'''
