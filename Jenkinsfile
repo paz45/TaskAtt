@@ -36,6 +36,7 @@ pipeline {
                         {
                             break
                         }
+                        sh 'sleep 6'
                         counter = counter + 1
                     }
                 }
