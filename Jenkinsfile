@@ -18,11 +18,14 @@ pipeline {
         }
         stage('pull image from registry and run the pod')
         {
-            sh'''
-            sed -i -e "s/TAG_NAME/${TAG_NAME}/g" my-app-deployment.yaml
-            kubectl apply -f my-app-deployment.yaml
-            kubectl port-forward service/my-app 3001:3001
-            '''
+            steps
+            {
+                sh'''
+                sed -i -e "s/TAG_NAME/${TAG_NAME}/g" my-app-deployment.yaml
+                kubectl apply -f my-app-deployment.yaml
+                kubectl port-forward service/my-app 3001:3001
+                '''
+            }
         }
     }
 }
