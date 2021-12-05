@@ -41,10 +41,11 @@ pipeline {
                     }
                 }
                 sh '''
-                    if [[ ${counter} -eq 10 ]]; then
+                    if [[ $counter -eq 10 ]]; then
                         echo "pod my-app failed to start"
                         exit 1
                     fi
+                export KUBECONFIG="/home/jenkins/.kube/config"
                 kubectl get pods -A | grep my-app |grep Running
                 kubectl port-forward service/my-app 3001:3001
                 '''
