@@ -11,6 +11,7 @@ pipeline {
             steps 
             {
                 sh '''
+                docker login 127.0.0.1.nip.io -u admin -p admin
                 docker tag nodejs_paz:1 127.0.0.1.nip.io/nodejs_ritter:${TAG_NAME}
                 docker push 127.0.0.1.nip.io/nodejs_ritter:${TAG_NAME}
                 '''
