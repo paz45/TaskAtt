@@ -31,6 +31,7 @@ pipeline {
                     def counter = 0
                     while (counter <= 10)
                     {
+                        sh 'export KUBECONFIG="/home/jenkins/.kube/config"'
                         def is_running = sh(script: "kubectl get pods -A | grep my-app |grep Running", returnStatus:true)
                         if (is_running == 0)
                         {
