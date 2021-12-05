@@ -32,7 +32,7 @@ spec:
   spec:
     selector:
       app: my-app
-    type: LoadBalancer
+    type: NodePort
     ports:
     - port: 3000
       targetPort: 3000
