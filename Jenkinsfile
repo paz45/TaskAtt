@@ -46,7 +46,6 @@ pipeline {
                         exit 1
                     fi
                 export KUBECONFIG="/home/jenkins/.kube/config"
-                kubectl get pods -A | grep my-app |grep Running
                 kubectl port-forward service/my-app 3001:3000 &
                 '''
             }
