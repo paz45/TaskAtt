@@ -18,7 +18,7 @@ spec:
       # - name: myregistrykey
       containers:
       - name: my-app
-        image: 127.0.0.1.nip.io/nodejs_ritter:1
+        image: 127.0.0.1.nip.io/nodejs_ritter:TAG_NAME
         imagePullPolicy: Always
         ports:
           - containerPort: 3000
