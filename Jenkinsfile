@@ -46,7 +46,7 @@ pipeline {
                         exit 1
                     fi
                 export KUBECONFIG="/home/jenkins/.kube/config"
-                kubectl port-forward service/my-app 3001:3000 &
+                kubectl port-forward service/my-app 3001:3000
                 '''
             }
         }
