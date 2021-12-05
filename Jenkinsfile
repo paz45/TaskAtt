@@ -29,7 +29,7 @@ pipeline {
                 while [ $counter -le 10 ];
                 do
                     echo "Welcome $counter times"
-                    def is_running=`kubectl get pods -A | grep my-app |grep Running`
+                    is_running=`kubectl get pods -A | grep my-app |grep Running`
                     if [[ $is_running -eq 0 ]]; then
                         break
                     fi
