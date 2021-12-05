@@ -21,7 +21,7 @@ pipeline {
         {
             steps
             {
-                withCredentials([file(variable: 'KUBECRED')]) 
+                withCredentials([file(credentialsId: 'localhost', variable: 'KUBECRED')]) 
                 {
                     sh'''
                     sudo export $KUBECRED > "/home/paz/.minikube/profiles/minikube/client.key"
