@@ -21,16 +21,12 @@ pipeline {
         {
             steps
             {
-                withCredentials([file(credentialsId: '127.0.0.1', variable: 'KUBECRED')]) 
-                {
-                    sh'''
-                    sudo export $KUBECRED > "/home/paz/.minikube/profiles/minikube/client.key"
-                    sudo export KUBECONFIG="/home/paz/.minikube/profiles/minikube/client.key"
-                    sed -i -e "s/TAG_NAME/${TAG_NAME}/g" my-app-deployment.yaml
-                    kubectl apply -f my-app-deployment.yaml
-                    kubectl port-forward service/my-app 3001:3001
-                    '''
-                }
+                sh'''
+                sudo export KUBECONFIG="/home/paz/.kube/config"
+                sed -i -e "s/TAG_NAME/${TAG_NAME}/g" my-app-deployment.yaml
+                kubectl apply -f my-app-deployment.yaml
+                kubectl port-forward service/my-app 3001:3001
+                '''
             }
         }
     }
