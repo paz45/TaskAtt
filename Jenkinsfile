@@ -25,6 +25,22 @@ pipeline {
                 export KUBECONFIG="/home/jenkins/.kube/config"
                 sed -i -e "s/TAG_NAME/${TAG_NAME}/g" my-app-deployment.yaml
                 kubectl apply -f my-app-deployment.yaml
+                def counter=0
+                while [ $counter -le 10 ]
+                do
+                    echo "Welcome $counter times"
+                    def is_running=`kubectl get pods -A | grep my-app |grep Running`
+                    if [[ $is_running -eq 0 ]]; then
+                        break
+                    fi
+                    counter=$(( $counter + 1 ))
+
+                done
+                if [[ $counter -eq 10 ]]; then
+                    echo "pod my-app failed to start"
+                    exit 1
+                fi
+                kubectl get pods -A | grep my-app |grep Running
                 kubectl port-forward service/my-app 3001:3001
                 '''
             }
