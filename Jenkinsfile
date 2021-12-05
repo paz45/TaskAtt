@@ -26,6 +26,7 @@ pipeline {
                     }
                 }
                 sh 'minikube start --driver=docker'
+                sh 'sudo snap install kubectl --classic'
             }
         }
     }

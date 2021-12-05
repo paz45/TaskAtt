@@ -1,0 +1,440 @@
+* 
+* ==> Audit <==
+* |---------|--------------------------------------|----------|------|---------|-------------------------------|-------------------------------|
+| Command |                 Args                 | Profile  | User | Version |          Start Time           |           End Time            |
+|---------|--------------------------------------|----------|------|---------|-------------------------------|-------------------------------|
+| start   |                                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 16:07:44 IST | Fri, 03 Dec 2021 16:09:18 IST |
+| delete  |                                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 17:04:52 IST | Fri, 03 Dec 2021 17:04:55 IST |
+| start   |                                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 17:27:55 IST | Fri, 03 Dec 2021 17:28:38 IST |
+| delete  |                                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 17:29:32 IST | Fri, 03 Dec 2021 17:29:35 IST |
+| delete  |                                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 17:46:07 IST | Fri, 03 Dec 2021 17:46:07 IST |
+| start   | --driver=docker                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 17:46:16 IST | Fri, 03 Dec 2021 17:47:00 IST |
+| start   | --driver=docker                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 21:54:25 IST | Fri, 03 Dec 2021 21:55:15 IST |
+| delete  |                                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 21:59:18 IST | Fri, 03 Dec 2021 21:59:22 IST |
+| start   | --driver=docker                      | minikube | paz  | v1.24.0 | Fri, 03 Dec 2021 22:00:10 IST | Fri, 03 Dec 2021 22:00:55 IST |
+| ssh     | docker container ls                  | minikube | paz  | v1.24.0 | Sat, 04 Dec 2021 17:02:18 IST | Sat, 04 Dec 2021 17:02:19 IST |
+| ssh     |                                      | minikube | paz  | v1.24.0 | Sat, 04 Dec 2021 17:23:28 IST | Sat, 04 Dec 2021 17:27:23 IST |
+| addons  | list                                 | minikube | paz  | v1.24.0 | Sat, 04 Dec 2021 19:32:11 IST | Sat, 04 Dec 2021 19:32:11 IST |
+| stop    |                                      | minikube | paz  | v1.24.0 | Sat, 04 Dec 2021 19:35:25 IST | Sat, 04 Dec 2021 19:35:36 IST |
+| start   | --insecure-registry=127.0.0.1.nip.io | minikube | paz  | v1.24.0 | Sat, 04 Dec 2021 19:35:58 IST | Sat, 04 Dec 2021 19:36:30 IST |
+| ssh     |                                      | minikube | paz  | v1.24.0 | Sat, 04 Dec 2021 19:41:13 IST | Sat, 04 Dec 2021 19:43:33 IST |
+| stop    |                                      | minikube | paz  | v1.24.0 | Sat, 04 Dec 2021 19:43:45 IST | Sat, 04 Dec 2021 19:43:56 IST |
+|---------|--------------------------------------|----------|------|---------|-------------------------------|-------------------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2021/12/04 19:44:00
+Running on machine: paz-T14
+Binary: Built with gc go1.17.2 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1204 19:44:00.183793  262203 out.go:297] Setting OutFile to fd 1 ...
+I1204 19:44:00.184019  262203 out.go:349] isatty.IsTerminal(1) = true
+I1204 19:44:00.184025  262203 out.go:310] Setting ErrFile to fd 2...
+I1204 19:44:00.184031  262203 out.go:349] isatty.IsTerminal(2) = true
+I1204 19:44:00.184195  262203 root.go:313] Updating PATH: /home/paz/.minikube/bin
+I1204 19:44:00.184494  262203 out.go:304] Setting JSON to false
+I1204 19:44:00.186941  262203 start.go:112] hostinfo: {"hostname":"paz-T14","uptime":79316,"bootTime":1638560525,"procs":533,"os":"linux","platform":"ubuntu","platformFamily":"debian","platformVersion":"20.04","kernelVersion":"5.8.0-53-generic","kernelArch":"x86_64","virtualizationSystem":"kvm","virtualizationRole":"host","hostId":"42f3930f-86d3-49ea-a28e-670de2f4668a"}
+I1204 19:44:00.187053  262203 start.go:122] virtualization: kvm host
+I1204 19:44:00.190705  262203 out.go:176] 😄  minikube v1.24.0 on Ubuntu 20.04
+I1204 19:44:00.190926  262203 notify.go:174] Checking for updates...
+I1204 19:44:00.191419  262203 config.go:176] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.22.3
+I1204 19:44:00.191488  262203 driver.go:343] Setting default libvirt URI to qemu:///system
+I1204 19:44:00.273641  262203 docker.go:132] docker version: linux-20.10.6
+I1204 19:44:00.273728  262203 cli_runner.go:115] Run: docker system info --format "{{json .}}"
+I1204 19:44:00.420637  262203 info.go:263] docker info: {ID:O3QX:EJGD:C5XJ:EPB2:BTD5:GMOP:DWWH:KMC5:O7BQ:VSQM:N4VH:BAMF Containers:4 ContainersRunning:3 ContainersPaused:0 ContainersStopped:1 Images:31 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:true KernelMemoryTCP:true CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:51 OomKillDisable:true NGoroutines:56 SystemTime:2021-12-04 19:44:00.325526392 +0200 IST LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:0 KernelVersion:5.8.0-53-generic OperatingSystem:Ubuntu 20.04.1 LTS OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:8 MemTotal:16432717824 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:paz-T14 Labels:[] ExperimentalBuild:false ServerVersion:20.10.6 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:05f951a3781f4f2c1911b05e61c160e9c30eaa8e Expected:05f951a3781f4f2c1911b05e61c160e9c30eaa8e} RuncCommit:{ID:12644e614e25b05da6fd08a38ffa0cfe1903fdec Expected:12644e614e25b05da6fd08a38ffa0cfe1903fdec} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=apparmor name=seccomp,profile=default] ProductLicense: Warnings:[WARNING: API is accessible on http://0.0.0.0:2375 without encryption.
+         Access to the remote API is equivalent to root access on the host. Refer
+         to the 'Docker daemon attack surface' section in the documentation for
+         more information: https://docs.docker.com/go/attack-surface/] ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Experimental:true Name:app Path:/usr/libexec/docker/cli-plugins/docker-app SchemaVersion:0.1.0 ShortDescription:Docker App Vendor:Docker Inc. Version:v0.9.1-beta3] map[Name:buildx Path:/usr/libexec/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Build with BuildKit Vendor:Docker Inc. Version:v0.5.1-docker] map[Name:scan Path:/usr/libexec/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.7.0]] Warnings:<nil>}}
+I1204 19:44:00.420828  262203 docker.go:237] overlay module found
+I1204 19:44:00.426674  262203 out.go:176] ✨  Using the docker driver based on existing profile
+I1204 19:44:00.426724  262203 start.go:280] selected driver: docker
+I1204 19:44:00.426748  262203 start.go:762] validating driver "docker" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c Memory:3900 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.22.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.22.3 ControlPlane:true Worker:true}] Addons:map[ambassador:false auto-pause:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false helm-tiller:false ingress:false ingress-dns:false istio:false istio-provisioner:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-gluster:false volumesnapshots:false] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/paz:/minikube-host}
+I1204 19:44:00.426907  262203 start.go:773] status for docker: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc:}
+I1204 19:44:00.427176  262203 cli_runner.go:115] Run: docker system info --format "{{json .}}"
+I1204 19:44:00.609424  262203 info.go:263] docker info: {ID:O3QX:EJGD:C5XJ:EPB2:BTD5:GMOP:DWWH:KMC5:O7BQ:VSQM:N4VH:BAMF Containers:4 ContainersRunning:3 ContainersPaused:0 ContainersStopped:1 Images:31 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:true KernelMemoryTCP:true CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:51 OomKillDisable:true NGoroutines:56 SystemTime:2021-12-04 19:44:00.500820377 +0200 IST LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:0 KernelVersion:5.8.0-53-generic OperatingSystem:Ubuntu 20.04.1 LTS OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:8 MemTotal:16432717824 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:paz-T14 Labels:[] ExperimentalBuild:false ServerVersion:20.10.6 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:05f951a3781f4f2c1911b05e61c160e9c30eaa8e Expected:05f951a3781f4f2c1911b05e61c160e9c30eaa8e} RuncCommit:{ID:12644e614e25b05da6fd08a38ffa0cfe1903fdec Expected:12644e614e25b05da6fd08a38ffa0cfe1903fdec} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=apparmor name=seccomp,profile=default] ProductLicense: Warnings:[WARNING: API is accessible on http://0.0.0.0:2375 without encryption.
+         Access to the remote API is equivalent to root access on the host. Refer
+         to the 'Docker daemon attack surface' section in the documentation for
+         more information: https://docs.docker.com/go/attack-surface/] ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Experimental:true Name:app Path:/usr/libexec/docker/cli-plugins/docker-app SchemaVersion:0.1.0 ShortDescription:Docker App Vendor:Docker Inc. Version:v0.9.1-beta3] map[Name:buildx Path:/usr/libexec/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Build with BuildKit Vendor:Docker Inc. Version:v0.5.1-docker] map[Name:scan Path:/usr/libexec/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.7.0]] Warnings:<nil>}}
+I1204 19:44:00.611739  262203 cni.go:93] Creating CNI manager for ""
+I1204 19:44:00.611802  262203 cni.go:167] CNI unnecessary in this configuration, recommending no CNI
+I1204 19:44:00.612072  262203 start_flags.go:282] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c Memory:3900 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.22.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.22.3 ControlPlane:true Worker:true}] Addons:map[ambassador:false auto-pause:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false helm-tiller:false ingress:false ingress-dns:false istio:false istio-provisioner:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-gluster:false volumesnapshots:false] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/paz:/minikube-host}
+I1204 19:44:00.615264  262203 out.go:176] 👍  Starting control plane node minikube in cluster minikube
+I1204 19:44:00.615299  262203 cache.go:118] Beginning downloading kic base image for docker with docker
+I1204 19:44:00.618106  262203 out.go:176] 🚜  Pulling base image ...
+I1204 19:44:00.618139  262203 preload.go:132] Checking if preload exists for k8s version v1.22.3 and runtime docker
+I1204 19:44:00.618182  262203 preload.go:148] Found local preload: /home/paz/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v13-v1.22.3-docker-overlay2-amd64.tar.lz4
+I1204 19:44:00.618191  262203 cache.go:57] Caching tarball of preloaded images
+I1204 19:44:00.618225  262203 image.go:75] Checking for gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c in local docker daemon
+I1204 19:44:00.618406  262203 preload.go:174] Found /home/paz/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v13-v1.22.3-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I1204 19:44:00.618417  262203 cache.go:60] Finished verifying existence of preloaded tar for  v1.22.3 on docker
+I1204 19:44:00.618574  262203 profile.go:147] Saving config to /home/paz/.minikube/profiles/minikube/config.json ...
+I1204 19:44:00.725667  262203 image.go:79] Found gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c in local docker daemon, skipping pull
+I1204 19:44:00.725709  262203 cache.go:140] gcr.io/k8s-minikube/kicbase:v0.0.28@sha256:4780f1897569d2bf77aafb3d133a08d42b4fe61127f06fcfc90c2c5d902d893c exists in daemon, skipping load
+I1204 19:44:00.725728  262203 cache.go:206] Successfully downloaded all kic artifacts
+I1204 19:44:00.725762  262203 start.go:313] acquiring machines lock for minikube: {Name:mk700d070718531effb0fe6179a9f1a02c61a2e4 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1204 19:44:00.725895  262203 start.go:317] acquired machines lock for "minikube" in 94.412µs
+I1204 19:44:00.725915  262203 start.go:93] Skipping create...Using existing machine configuration
+I1204 19:44:00.725919  262203 fix.go:55] fixHost starting: 
+I1204 19:44:00.726257  262203 cli_runner.go:115] Run: docker container inspect minikube --format={{.State.Status}}
+I1204 19:44:00.788281  262203 fix.go:108] recreateIfNeeded on minikube: state=Stopped err=<nil>
+W1204 19:44:00.788302  262203 fix.go:134] unexpected machine state, will restart: <nil>
+I1204 19:44:00.794402  262203 out.go:176] 🔄  Restarting existing docker container for "minikube" ...
+I1204 19:44:00.794485  262203 cli_runner.go:115] Run: docker start minikube
+I1204 19:44:01.720664  262203 cli_runner.go:115] Run: docker container inspect minikube --format={{.State.Status}}
+I1204 19:44:01.788950  262203 kic.go:420] container "minikube" state is running.
+I1204 19:44:01.789555  262203 cli_runner.go:115] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1204 19:44:01.854380  262203 profile.go:147] Saving config to /home/paz/.minikube/profiles/minikube/config.json ...
+I1204 19:44:01.854711  262203 machine.go:88] provisioning docker machine ...
+I1204 19:44:01.854752  262203 ubuntu.go:169] provisioning hostname "minikube"
+I1204 19:44:01.854811  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:01.922849  262203 main.go:130] libmachine: Using SSH client type: native
+I1204 19:44:01.923133  262203 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49172 <nil> <nil>}
+I1204 19:44:01.923154  262203 main.go:130] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I1204 19:44:01.923995  262203 main.go:130] libmachine: Error dialing TCP: ssh: handshake failed: read tcp 127.0.0.1:45528->127.0.0.1:49172: read: connection reset by peer
+I1204 19:44:05.087755  262203 main.go:130] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1204 19:44:05.087838  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:05.153803  262203 main.go:130] libmachine: Using SSH client type: native
+I1204 19:44:05.154098  262203 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49172 <nil> <nil>}
+I1204 19:44:05.154121  262203 main.go:130] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I1204 19:44:05.287326  262203 main.go:130] libmachine: SSH cmd err, output: <nil>: 
+I1204 19:44:05.287358  262203 ubuntu.go:175] set auth options {CertDir:/home/paz/.minikube CaCertPath:/home/paz/.minikube/certs/ca.pem CaPrivateKeyPath:/home/paz/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/paz/.minikube/machines/server.pem ServerKeyPath:/home/paz/.minikube/machines/server-key.pem ClientKeyPath:/home/paz/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/paz/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/paz/.minikube}
+I1204 19:44:05.287392  262203 ubuntu.go:177] setting up certificates
+I1204 19:44:05.287399  262203 provision.go:83] configureAuth start
+I1204 19:44:05.287464  262203 cli_runner.go:115] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1204 19:44:05.351100  262203 provision.go:138] copyHostCerts
+I1204 19:44:05.351170  262203 exec_runner.go:144] found /home/paz/.minikube/ca.pem, removing ...
+I1204 19:44:05.351181  262203 exec_runner.go:207] rm: /home/paz/.minikube/ca.pem
+I1204 19:44:05.351264  262203 exec_runner.go:151] cp: /home/paz/.minikube/certs/ca.pem --> /home/paz/.minikube/ca.pem (1070 bytes)
+I1204 19:44:05.351365  262203 exec_runner.go:144] found /home/paz/.minikube/cert.pem, removing ...
+I1204 19:44:05.351370  262203 exec_runner.go:207] rm: /home/paz/.minikube/cert.pem
+I1204 19:44:05.351404  262203 exec_runner.go:151] cp: /home/paz/.minikube/certs/cert.pem --> /home/paz/.minikube/cert.pem (1115 bytes)
+I1204 19:44:05.351472  262203 exec_runner.go:144] found /home/paz/.minikube/key.pem, removing ...
+I1204 19:44:05.351477  262203 exec_runner.go:207] rm: /home/paz/.minikube/key.pem
+I1204 19:44:05.351506  262203 exec_runner.go:151] cp: /home/paz/.minikube/certs/key.pem --> /home/paz/.minikube/key.pem (1675 bytes)
+I1204 19:44:05.351592  262203 provision.go:112] generating server cert: /home/paz/.minikube/machines/server.pem ca-key=/home/paz/.minikube/certs/ca.pem private-key=/home/paz/.minikube/certs/ca-key.pem org=paz.minikube san=[192.168.49.2 127.0.0.1 localhost 127.0.0.1 minikube minikube]
+I1204 19:44:05.495407  262203 provision.go:172] copyRemoteCerts
+I1204 19:44:05.495453  262203 ssh_runner.go:152] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I1204 19:44:05.495492  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:05.567591  262203 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49172 SSHKeyPath:/home/paz/.minikube/machines/minikube/id_rsa Username:docker}
+I1204 19:44:05.664126  262203 ssh_runner.go:319] scp /home/paz/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1675 bytes)
+I1204 19:44:05.695383  262203 ssh_runner.go:319] scp /home/paz/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1070 bytes)
+I1204 19:44:05.722805  262203 ssh_runner.go:319] scp /home/paz/.minikube/machines/server.pem --> /etc/docker/server.pem (1192 bytes)
+I1204 19:44:05.754010  262203 provision.go:86] duration metric: configureAuth took 466.598044ms
+I1204 19:44:05.754030  262203 ubuntu.go:193] setting minikube options for container-runtime
+I1204 19:44:05.754294  262203 config.go:176] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.22.3
+I1204 19:44:05.754346  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:05.812435  262203 main.go:130] libmachine: Using SSH client type: native
+I1204 19:44:05.812644  262203 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49172 <nil> <nil>}
+I1204 19:44:05.812656  262203 main.go:130] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I1204 19:44:05.949008  262203 main.go:130] libmachine: SSH cmd err, output: <nil>: overlay
+
+I1204 19:44:05.949024  262203 ubuntu.go:71] root file system type: overlay
+I1204 19:44:05.949313  262203 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I1204 19:44:05.949388  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:06.007083  262203 main.go:130] libmachine: Using SSH client type: native
+I1204 19:44:06.007304  262203 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49172 <nil> <nil>}
+I1204 19:44:06.007441  262203 main.go:130] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I1204 19:44:06.160581  262203 main.go:130] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I1204 19:44:06.160658  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:06.217833  262203 main.go:130] libmachine: Using SSH client type: native
+I1204 19:44:06.218035  262203 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a0280] 0x7a3360 <nil>  [] 0s} 127.0.0.1 49172 <nil> <nil>}
+I1204 19:44:06.218058  262203 main.go:130] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I1204 19:44:06.375098  262203 main.go:130] libmachine: SSH cmd err, output: <nil>: 
+I1204 19:44:06.375126  262203 machine.go:91] provisioned docker machine in 4.520401679s
+I1204 19:44:06.375155  262203 start.go:267] post-start starting for "minikube" (driver="docker")
+I1204 19:44:06.375166  262203 start.go:277] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I1204 19:44:06.375271  262203 ssh_runner.go:152] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I1204 19:44:06.375413  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:06.452872  262203 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49172 SSHKeyPath:/home/paz/.minikube/machines/minikube/id_rsa Username:docker}
+I1204 19:44:06.553339  262203 ssh_runner.go:152] Run: cat /etc/os-release
+I1204 19:44:06.557909  262203 main.go:130] libmachine: Couldn't set key PRIVACY_POLICY_URL, no corresponding struct field found
+I1204 19:44:06.557928  262203 main.go:130] libmachine: Couldn't set key VERSION_CODENAME, no corresponding struct field found
+I1204 19:44:06.557940  262203 main.go:130] libmachine: Couldn't set key UBUNTU_CODENAME, no corresponding struct field found
+I1204 19:44:06.557946  262203 info.go:137] Remote host: Ubuntu 20.04.2 LTS
+I1204 19:44:06.557956  262203 filesync.go:126] Scanning /home/paz/.minikube/addons for local assets ...
+I1204 19:44:06.558040  262203 filesync.go:126] Scanning /home/paz/.minikube/files for local assets ...
+I1204 19:44:06.558067  262203 start.go:270] post-start completed in 182.903799ms
+I1204 19:44:06.558140  262203 ssh_runner.go:152] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I1204 19:44:06.558176  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:06.622432  262203 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49172 SSHKeyPath:/home/paz/.minikube/machines/minikube/id_rsa Username:docker}
+I1204 19:44:06.716240  262203 fix.go:57] fixHost completed within 5.990316867s
+I1204 19:44:06.716261  262203 start.go:80] releasing machines lock for "minikube", held for 5.99035248s
+I1204 19:44:06.716344  262203 cli_runner.go:115] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1204 19:44:06.786081  262203 ssh_runner.go:152] Run: systemctl --version
+I1204 19:44:06.786118  262203 ssh_runner.go:152] Run: curl -sS -m 2 https://k8s.gcr.io/
+I1204 19:44:06.786129  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:06.786168  262203 cli_runner.go:115] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1204 19:44:06.849772  262203 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49172 SSHKeyPath:/home/paz/.minikube/machines/minikube/id_rsa Username:docker}
+I1204 19:44:06.853895  262203 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:49172 SSHKeyPath:/home/paz/.minikube/machines/minikube/id_rsa Username:docker}
+I1204 19:44:07.330749  262203 ssh_runner.go:152] Run: sudo systemctl is-active --quiet service containerd
+I1204 19:44:07.350808  262203 ssh_runner.go:152] Run: sudo systemctl cat docker.service
+I1204 19:44:07.366267  262203 cruntime.go:255] skipping containerd shutdown because we are bound to it
+I1204 19:44:07.366332  262203 ssh_runner.go:152] Run: sudo systemctl is-active --quiet service crio
+I1204 19:44:07.381937  262203 ssh_runner.go:152] Run: /bin/bash -c "sudo mkdir -p /etc && printf %!s(MISSING) "runtime-endpoint: unix:///var/run/dockershim.sock
+image-endpoint: unix:///var/run/dockershim.sock
+" | sudo tee /etc/crictl.yaml"
+I1204 19:44:07.401194  262203 ssh_runner.go:152] Run: sudo systemctl unmask docker.service
+I1204 19:44:07.527492  262203 ssh_runner.go:152] Run: sudo systemctl enable docker.socket
+I1204 19:44:07.659849  262203 ssh_runner.go:152] Run: sudo systemctl cat docker.service
+I1204 19:44:07.675312  262203 ssh_runner.go:152] Run: sudo systemctl daemon-reload
+I1204 19:44:07.791614  262203 ssh_runner.go:152] Run: sudo systemctl start docker
+I1204 19:44:07.890549  262203 out.go:176] 
+W1204 19:44:07.890800  262203 out.go:241] ❌  Exiting due to RUNTIME_ENABLE: sudo systemctl start docker: Process exited with status 1
+stdout:
+
+stderr:
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xe" for details.
+
+W1204 19:44:07.890836  262203 out.go:241] 
+W1204 19:44:07.892237  262203 out.go:241] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+
+* 
+* ==> Docker <==
+* -- Logs begin at Sat 2021-12-04 17:44:02 UTC, end at Sat 2021-12-04 17:45:03 UTC. --
+Dec 04 17:44:02 minikube systemd[1]: Starting Docker Application Container Engine...
+Dec 04 17:44:02 minikube dockerd[210]: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [10.96.0.0/12], from file: [127.0.0.1.nip.io])
+Dec 04 17:44:02 minikube systemd[1]: docker.service: Main process exited, code=exited, status=1/FAILURE
+Dec 04 17:44:02 minikube systemd[1]: docker.service: Failed with result 'exit-code'.
+Dec 04 17:44:02 minikube systemd[1]: Failed to start Docker Application Container Engine.
+Dec 04 17:44:02 minikube systemd[1]: docker.service: Scheduled restart job, restart counter is at 1.
+Dec 04 17:44:02 minikube systemd[1]: Stopped Docker Application Container Engine.
+Dec 04 17:44:02 minikube systemd[1]: Starting Docker Application Container Engine...
+Dec 04 17:44:02 minikube dockerd[222]: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [10.96.0.0/12], from file: [127.0.0.1.nip.io])
+Dec 04 17:44:02 minikube systemd[1]: docker.service: Main process exited, code=exited, status=1/FAILURE
+Dec 04 17:44:02 minikube systemd[1]: docker.service: Failed with result 'exit-code'.
+Dec 04 17:44:02 minikube systemd[1]: Failed to start Docker Application Container Engine.
+Dec 04 17:44:03 minikube systemd[1]: docker.service: Scheduled restart job, restart counter is at 2.
+Dec 04 17:44:03 minikube systemd[1]: Stopped Docker Application Container Engine.
+Dec 04 17:44:03 minikube systemd[1]: Starting Docker Application Container Engine...
+Dec 04 17:44:03 minikube dockerd[233]: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [10.96.0.0/12], from file: [127.0.0.1.nip.io])
+Dec 04 17:44:03 minikube systemd[1]: docker.service: Main process exited, code=exited, status=1/FAILURE
+Dec 04 17:44:03 minikube systemd[1]: docker.service: Failed with result 'exit-code'.
+Dec 04 17:44:03 minikube systemd[1]: Failed to start Docker Application Container Engine.
+Dec 04 17:44:03 minikube systemd[1]: docker.service: Scheduled restart job, restart counter is at 3.
+Dec 04 17:44:03 minikube systemd[1]: Stopped Docker Application Container Engine.
+Dec 04 17:44:03 minikube systemd[1]: docker.service: Start request repeated too quickly.
+Dec 04 17:44:03 minikube systemd[1]: docker.service: Failed with result 'exit-code'.
+Dec 04 17:44:03 minikube systemd[1]: Failed to start Docker Application Container Engine.
+Dec 04 17:44:07 minikube systemd[1]: Starting Docker Application Container Engine...
+Dec 04 17:44:07 minikube dockerd[401]: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [10.96.0.0/12], from file: [127.0.0.1.nip.io])
+Dec 04 17:44:07 minikube systemd[1]: docker.service: Main process exited, code=exited, status=1/FAILURE
+Dec 04 17:44:07 minikube systemd[1]: docker.service: Failed with result 'exit-code'.
+Dec 04 17:44:07 minikube systemd[1]: Failed to start Docker Application Container Engine.
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Scheduled restart job, restart counter is at 1.
+Dec 04 17:44:08 minikube systemd[1]: Stopped Docker Application Container Engine.
+Dec 04 17:44:08 minikube systemd[1]: Starting Docker Application Container Engine...
+Dec 04 17:44:08 minikube dockerd[412]: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [10.96.0.0/12], from file: [127.0.0.1.nip.io])
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Main process exited, code=exited, status=1/FAILURE
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Failed with result 'exit-code'.
+Dec 04 17:44:08 minikube systemd[1]: Failed to start Docker Application Container Engine.
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Scheduled restart job, restart counter is at 2.
+Dec 04 17:44:08 minikube systemd[1]: Stopped Docker Application Container Engine.
+Dec 04 17:44:08 minikube systemd[1]: Starting Docker Application Container Engine...
+Dec 04 17:44:08 minikube dockerd[423]: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [10.96.0.0/12], from file: [127.0.0.1.nip.io])
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Main process exited, code=exited, status=1/FAILURE
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Failed with result 'exit-code'.
+Dec 04 17:44:08 minikube systemd[1]: Failed to start Docker Application Container Engine.
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Scheduled restart job, restart counter is at 3.
+Dec 04 17:44:08 minikube systemd[1]: Stopped Docker Application Container Engine.
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Start request repeated too quickly.
+Dec 04 17:44:08 minikube systemd[1]: docker.service: Failed with result 'exit-code'.
+Dec 04 17:44:08 minikube systemd[1]: Failed to start Docker Application Container Engine.
+
+* 
+* ==> container status <==
+* 
+* ==> describe nodes <==
+* 
+* ==> dmesg <==
+* [  +0.088048] snd_hda_codec_realtek ehdaudio0D0: ASoC: sink widget AIF1TX overwritten
+[  +0.000011] snd_hda_codec_realtek ehdaudio0D0: ASoC: source widget AIF1RX overwritten
+[  +0.001459] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: sink widget hifi3 overwritten
+[  +0.000011] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: sink widget hifi2 overwritten
+[  +0.000010] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: sink widget hifi1 overwritten
+[  +0.000009] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: source widget Codec Output Pin1 overwritten
+[  +0.000006] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: sink widget Codec Input Pin1 overwritten
+[  +0.000013] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: sink widget Analog Codec Playback overwritten
+[  +0.000012] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: sink widget Digital Codec Playback overwritten
+[  +0.000011] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: sink widget Alt Analog Codec Playback overwritten
+[  +0.000016] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: source widget Analog Codec Capture overwritten
+[  +0.000011] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: source widget Digital Codec Capture overwritten
+[  +0.000012] skl_hda_dsp_generic skl_hda_dsp_generic: ASoC: source widget Alt Analog Codec Capture overwritten
+[  +1.563458] Bluetooth: hci0: Failed to send Intel_Write_DDC (-22)
+[  +3.084095] Started bpfilter
+[ +22.542042] kauditd_printk_skb: 47 callbacks suppressed
+[  +8.699155] systemd-journald[300]: File /var/log/journal/42f3930f86d349eaa28e670de2f4668a/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[Dec 3 19:43] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 000000009d481cf8 port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +1.306573] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 000000009d481cf8 port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.029352] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 000000009d481cf8 port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +6.831227] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000009d7941 port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.030089] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000009d7941 port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +9.801952] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 000000004773dec8 port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.033077] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 000000004773dec8 port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +8.414109] [drm:drm_dp_send_link_address [drm_kms_helper]] *ERROR* Sending link address failed with -5
+[  +0.050653] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000409a28e5 port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.036369] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000409a28e5 port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +4.570305] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000aaeeeadb port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.030284] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000aaeeeadb port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[Dec 3 19:45] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 000000002a41ba17 port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.036366] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 000000002a41ba17 port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.164215] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000ed428bdf port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.021878] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000ed428bdf port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.016114] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000ed428bdf port 3: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.465545] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000bb70eeb7 port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.027062] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000bb70eeb7 port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.025296] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000bb70eeb7 port 3: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.185898] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 0000000041a8d9e3 port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.035987] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 0000000041a8d9e3 port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.036159] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 0000000041a8d9e3 port 3: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.213467] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000f5d1b85b port 3: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +8.237210] [drm:drm_dp_send_link_address [drm_kms_helper]] *ERROR* Sending link address failed with -5
+[Dec 3 19:46] [drm:drm_dp_send_link_address [drm_kms_helper]] *ERROR* Sending link address failed with -5
+[ +32.903431] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.051667] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.096839] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 3: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.143671] r8152 2-2.1:1.0 (unnamed net_device) (uninitialized): Invalid header when reading pass-thru MAC addr
+[  +5.863015] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.028550] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.028946] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 3: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +9.920202] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.028531] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 2: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.028983] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 3: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[Dec 4 11:23] drm card0-DP-6: parent card0 should not be sleeping
+[  +0.915166] done.
+[  +0.008260] thermal thermal_zone5: failed to read out thermal zone (-61)
+[  +0.215772] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 0: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +6.159589] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 1: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.028945] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 3: DPCD read on addr 0x4b0 for 1 bytes NAKed
+[  +0.028983] [drm:drm_dp_mst_dpcd_read [drm_kms_helper]] *ERROR* mstb 00000000427aa43c port 0: DPCD read on addr 0x4b0 for 1 bytes NAKed
+
+* 
+* ==> kernel <==
+*  17:45:05 up 22:03,  0 users,  load average: 2.12, 2.35, 2.45
+Linux minikube 5.8.0-53-generic #60~20.04.1-Ubuntu SMP Thu May 6 09:52:46 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 20.04.2 LTS"
+
+* 
+* ==> kubelet <==
+* -- Logs begin at Sat 2021-12-04 17:44:02 UTC, end at Sat 2021-12-04 17:45:05 UTC. --
+-- No entries --
+
