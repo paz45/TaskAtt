@@ -25,8 +25,8 @@ pipeline {
                 export KUBECONFIG="/home/jenkins/.kube/config"
                 sed -i -e "s/TAG_NAME/${TAG_NAME}/g" my-app-deployment.yaml
                 kubectl apply -f my-app-deployment.yaml
-                def counter=0
-                while [[ $counter -le 10 ]]
+                counter=0
+                while [ $counter -le 10 ];
                 do
                     echo "Welcome $counter times"
                     def is_running=`kubectl get pods -A | grep my-app |grep Running`
