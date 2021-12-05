@@ -22,7 +22,7 @@ pipeline {
             steps
             {
                 sh'''
-                sudo export KUBECONFIG="/home/paz/.kube/config"
+                export KUBECONFIG="/home/paz/.kube/config"
                 sed -i -e "s/TAG_NAME/${TAG_NAME}/g" my-app-deployment.yaml
                 kubectl apply -f my-app-deployment.yaml
                 kubectl port-forward service/my-app 3001:3001
