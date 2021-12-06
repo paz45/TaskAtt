@@ -4,7 +4,6 @@ pipeline {
     }
     options {
         timestamps()
-        // gitLabConnection('SQream_gitlab')
     }
     stages{
         stage('install_minikube') {

@@ -29,14 +29,14 @@ pipeline {
                 script
                 {
                     def counter = 0
-                    while (counter <= 10)
+                    while (counter <= 12)
                     {
                         def is_running = sh(script: "export KUBECONFIG='/home/jenkins/.kube/config' ; kubectl get pods -A | grep my-app |grep Running", returnStatus:true)
                         if (is_running == 0)
                         {
                             break
                         }
-                        sh 'sleep 6'
+                        sh 'sleep 5'
                         counter = counter + 1
                     }
                 }
@@ -46,7 +46,7 @@ pipeline {
                         exit 1
                     fi
                 export KUBECONFIG="/home/jenkins/.kube/config"
-                kubectl port-forward service/my-app 3001:3000
+                kubectl port-forward service/my-app 3000:3000
                 '''
             }
         }
